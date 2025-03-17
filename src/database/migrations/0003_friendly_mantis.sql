@@ -1,0 +1,1 @@
+ALTER TABLE "email_otps" ADD COLUMN "is_verified" boolean DEFAULT false NOT NULL;
