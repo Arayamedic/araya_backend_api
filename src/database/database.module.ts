@@ -1,17 +1,17 @@
 import { Module } from '@nestjs/common';
-import 'dotenv/config';
 import { DrizzlePostgresModule } from '@knaadh/nestjs-drizzle-postgres';
 import * as schema from './schema/schema';
 import { UserRepository } from './repositories/user.repository';
 import { DoctorRepository } from './repositories/doctor.repository';
 import { EmailOtpRepository } from './repositories/email-otp.repository';
+import { config } from 'src/config/config';
 
 @Module({
   imports: [
     DrizzlePostgresModule.register({
       tag: 'DB_DEV',
       postgres: {
-        url: process.env.DATABASE_URL as string,
+        url: config.DATABASE_URL,
       },
       config: { schema: { ...schema } },
     }),

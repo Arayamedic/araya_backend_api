@@ -51,7 +51,7 @@ export class AuthService {
     return {
       accessToken,
       expiresAt: now.toISOString(),
-      message: 'User regisstration is Successful',
+      message: 'User registration is Successful',
     };
   }
 
@@ -72,7 +72,7 @@ export class AuthService {
     return {
       accessToken,
       expiresAt: now.toISOString(),
-      message: 'User regisstration is Successful',
+      message: 'User logged in Successfully',
     };
   }
 
@@ -189,7 +189,7 @@ export class AuthService {
       eq(users.email, params.email),
     );
     return {
-      message: 'Password reset successfully.',
+      message: 'Password reset successful.',
     };
   }
 
