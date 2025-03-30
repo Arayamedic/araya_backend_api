@@ -11,7 +11,6 @@ import { EmailModule } from 'src/email/email.module';
     DatabaseModule,
     EmailModule,
     JwtModule.register({
-      global: true,
       secret: config.JWT_SECRET,
       signOptions: { expiresIn: `${config.JWT_EXPIRY_IN_H0URS}h` },
     }),
