@@ -1,6 +1,10 @@
 version: 1
+runtime: nodejs20
 build:
-  dockerfile: Dockerfile
+  commands:
+    - npm install
+    - npm run build
 run:
+  command: npm run start:prod
   network:
     port: 3000
