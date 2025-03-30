@@ -1,12 +1,6 @@
 version: 1.0
-runtime: nodejs18
 build:
-  commands:
-    pre-build:
-      - npm install
-    build:
-      - npm run build
+  dockerfile: Dockerfile
 run:
-  commands:
-    start:
-      - npm run start:prod
+  network:
+    port: 3000
