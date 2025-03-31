@@ -17,7 +17,7 @@ export class EmailService {
   }) {
     const message = `<p>Hi ${params.username}, <br> Welcome to Arayamedic Your email verification code is: ${params.otp}</p>`;
     await this.sendEmail({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'no-reply@araya.ng',
       to: params.userEmail,
       subject: 'Email Verification Code',
       message,
@@ -32,7 +32,7 @@ export class EmailService {
   }) {
     const message = `<p>Hi ${params.username}, <br> Your password reset otp is: ${params.otp}</p>`;
     await this.sendEmail({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'no-reply@araya.ng',
       to: params.userEmail,
       subject: 'Forgot Password OTP',
       message,
